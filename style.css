@@ -1,0 +1,77 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: #222;
+  color: white;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.layout {
+  display: flex;
+}
+
+/* Full height sidebar band */
+.sidebar {
+  width: 16rem;
+  background: #f7f7f7;
+  padding: 1rem 0;
+}
+
+/* Sticky TOC */
+.sidebar-inner {
+  position: sticky;
+  top: 5.5rem;
+  padding: 0 1rem;
+}
+
+/* Top bar stays visible */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.content {
+  padding: 2rem;
+  max-width: 70ch;
+}
+
+.content pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.content code {
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar.open {
+    display: block;
+  }
+}
