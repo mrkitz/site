@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="$lang$">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>$title$</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation">
+    ☰
+  </button>
+  <span class="site-title">$title$</span>
+</header>
+
+<div class="layout">
+  <nav class="sidebar">
+   <div id="toc" class="sidebar-inner">
+     $if(toc)$
+     $toc$
+     $endif$
+   </div>
+  </nav>
+
+  <main class="content">
+    $body$
+  </main>
+</div>
+
+<script src="nav.js"></script>
+</body>
+</html>

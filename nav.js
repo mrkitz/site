@@ -4,10 +4,11 @@ const overlay = document.querySelector('.overlay');
 
 toggle.addEventListener('click', () => {
   sidebar.classList.toggle('open');
+  overlay.classList.toggle('open');
+
   if (sidebar.classList.contains('open')) {
   sidebar.scrollIntoView({ behavior: 'smooth' });
 }
-  overlay.classList.toggle('open');
 });
 
 // Close when clicking overlay
