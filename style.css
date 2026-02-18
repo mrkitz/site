@@ -1,3 +1,4 @@
+/* --- Base --- */
 
 body {
   margin: 0;
@@ -6,6 +7,14 @@ body {
   line-height: 1.5;
 }
 
+/* --- Layout --- */
+
+.layout {
+  display: flex;
+}
+
+ /* --- Components --- */
+
 .topbar {
   display: flex;
   align-items: center;
@@ -13,9 +22,13 @@ body {
   padding: 0.75rem 1rem;
   background: #222;
   color: white;
+  position: sticky;  /* Top bar stays visible */
+  top: 0;
+  z-index: 1000;
 }
 
-.menu-toggle {
+.menu-toggle {          /* control element hamburger */
+  display: none;        /* hide toggle on Desktop */
   font-size: 1.5rem;
   background: none;
   border: none;
@@ -23,8 +36,8 @@ body {
   cursor: pointer;
 }
 
-.layout {
-  display: flex;
+.overlay {
+  display: none;
 }
 
 /* Full height sidebar band */
@@ -32,6 +45,7 @@ body {
   width: 16rem;
   background: #f7f7f7;
   padding: 1rem 0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 /* Sticky TOC */
@@ -41,17 +55,12 @@ body {
   padding: 0 1rem;
 }
 
-/* Top bar stays visible */
-.topbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
 .content {
   padding: 2rem;
   max-width: 70ch;
 }
+
+/* --- Content --- */
 
 .content pre {
   max-width: 100%;
@@ -62,13 +71,44 @@ body {
   font-size: 0.9em;
 }
 
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
   }
 
+@media (max-width: 768px) {
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 3.5rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 3.5rem);
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 998;
+  }
+
+  .overlay.open {
+    display: block;
+  }
+}
   .sidebar {
     display: none;
+    position: fixed;
+    top: 3.5rem;      /* height of topbar */
+    left; 0;
+    width: 16rem;
+    height: calc(100% - 3.5rem);
+    background: #f7f7f7;
+    overflow-y: auto;
+    z-index: 999;
   }
 
   .sidebar.open {
