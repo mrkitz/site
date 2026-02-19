@@ -120,6 +120,14 @@ body {
 /* --- Responsive --- */
 @media (max-width: 768px) {
 
+  .topbar {
+    flex-wrap: wrap;
+  }
+
+  .topbar > * {
+    minwidth: 0;
+  }
+
   .content {
     padding: 1rem 1.5rem;
     max-width: 100%;
