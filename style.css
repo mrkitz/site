@@ -1,4 +1,7 @@
-/* --- Base --- */
+--- Base ---
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 :root {
   --header-height: 3.5rem;
@@ -8,6 +11,7 @@
 
 html {
   scroll-padding-top: var(--scroll-offset);
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -15,7 +19,9 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  /* overflow-x: hidden; */
 }
+
 
 /* --- Layout --- */
 
@@ -26,6 +32,8 @@ body {
  /* --- Components --- */
 
 .topbar {
+  max-width: 100%;
+  overflow: hidden;         /* two lines added */
   outline: 2px solid red;
   line-height: 1;
   display: flex;
@@ -112,8 +120,9 @@ body {
 @media (max-width: 768px) {
 
   .content {
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.5rem;
     max-width: 100%;
+    overflow: hidden;   /* added */
   }
 
   .menu-toggle {
