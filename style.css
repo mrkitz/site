@@ -2,12 +2,11 @@
 
 :root {
   --header-height: 3.5rem;
-  /* --scroll-offset: calc(var(--header-height) + 1rem); */
+  --scroll-offset: calc(var(--header-height) - 0.5rem);
 }
 
 html {
-  /* scroll-padding-top: calc(var(--header-height) + 1rem); */
-  scroll-padding-top: (--header-height);
+  scroll-padding-top: var(--scroll-offset);
 }
 
 body {
@@ -31,8 +30,8 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding: 0.75rem 1rem;
   min-height: var(--header-height);
-  /* padding: 0.75rem 1rem; */
   background: #222;
   color: white;
   position: sticky;  /* Top bar stays visible */
@@ -67,7 +66,8 @@ body {
 
 /* Full height sidebar band */
 .sidebar {
-  top: var(--header-height);
+  top: var(--scroll-offset);
+  position: sticky;    /* or relative */
   width: 16rem;
   background: #f7f7f7;
   padding: 1rem 0;
@@ -77,15 +77,14 @@ body {
 /* Sticky TOC */
 .sidebar-inner {
   position: sticky;
-  top: var(--header-height);
+  top: calc(var(--header-height) + 2.75rem);
   padding: 0 1rem;
 }
 
 .content h1,
 .content h2,
 .content h3 {
-  /* scroll-margin-top: calc(var(--header-height) + 1rem); */
-  scroll-margin-top: (--header-height);
+  scroll-margin-top: var(--scroll-offset);
 }
 
 .content {
@@ -123,7 +122,6 @@ body {
     height: calc(100% - var(--header-height));
     left: 0;
     width: 16rem;
-    height: calc(100% - 3.5rem);
     background: #f7f7f7;
     overflow-y: auto;
     z-index: 999;
@@ -140,7 +138,6 @@ body {
     height: calc(100% - var(--header-height));
     left: 0;
     width: 100%;
-    height: calc(100% - 3.5rem);
     background: rgba(0, 0, 0, 0.3);
     z-index: 998;
   }
