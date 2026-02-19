@@ -1,5 +1,15 @@
 /* --- Base --- */
 
+:root {
+  --header-height: 3.5rem;
+  /* --scroll-offset: calc(var(--header-height) + 1rem); */
+}
+
+html {
+  /* scroll-padding-top: calc(var(--header-height) + 1rem); */
+  scroll-padding-top: (--header-height);
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -16,15 +26,22 @@ body {
  /* --- Components --- */
 
 .topbar {
+  outline: 2px solid red;
+  line-height: 1;
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.75rem 1rem;
+  min-height: var(--header-height);
+  /* padding: 0.75rem 1rem; */
   background: #222;
   color: white;
   position: sticky;  /* Top bar stays visible */
   top: 0;
   z-index: 1000;
+}
+
+.topbar a {
+  line-height: 1;
 }
 
 .home-link {
@@ -35,6 +52,8 @@ body {
 
 .menu-toggle {          /* control element hamburger */
   display: none;        /* hide toggle on Desktop */
+  line-height: 1;
+  padding: 0;
   font-size: 1.5rem;
   background: none;
   border: none;
@@ -48,6 +67,7 @@ body {
 
 /* Full height sidebar band */
 .sidebar {
+  top: var(--header-height);
   width: 16rem;
   background: #f7f7f7;
   padding: 1rem 0;
@@ -55,9 +75,6 @@ body {
 }
 
 /* Sticky TOC */
-:root {
-  --header-height: 3.5rem;
-}
 .sidebar-inner {
   position: sticky;
   top: var(--header-height);
@@ -67,7 +84,8 @@ body {
 .content h1,
 .content h2,
 .content h3 {
-  scroll-margin-top: calc(var(--header-height) + 1rem);
+  /* scroll-margin-top: calc(var(--header-height) + 1rem); */
+  scroll-margin-top: (--header-height);
 }
 
 .content {
@@ -102,6 +120,7 @@ body {
     display: none;
     position: fixed;
     top: var(--header-height);
+    height: calc(100% - var(--header-height));
     left: 0;
     width: 16rem;
     height: calc(100% - 3.5rem);
@@ -117,7 +136,8 @@ body {
   .overlay {
     display: none;
     position: fixed;
-    top: 3.5rem;
+    top: var(--header-height);
+    height: calc(100% - var(--header-height));
     left: 0;
     width: 100%;
     height: calc(100% - 3.5rem);

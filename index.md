@@ -21,3 +21,24 @@ While I was in the mood for XML I added a site map to each blog and a text file 
 ## Summary
 Hello is a designer and writer. Recent work has touched on a range of topics, including the relationship of movement and interaction, the history of visual identity and branding in the arts, and the future of the museum in the digital age. His essay on the rise of graphic design MFA programs, "School Days" was dope. Thank you Twitter and your emoji project. Also, I made the descenders on links more pretty – look how they don’t overlap with the underline. The emoji extractor ignores some unicode characters, like these ones.
 
+## Knuth
+Thus, I came to the conclusion that the designer of a new
+system must not only be the implementer and first
+large||scale user; the designer should also write the first
+user manual.
+
+The separation of any of these four components would have
+hurt \TeX\ significantly. If I had not participated fully in
+all these activities, literally hundreds of improvements
+would never have been made, because I would never have
+thought of them or perceived why they were important.
+
+But a system cannot be successful if it is too strongly
+influenced by a single person. Once the initial design is
+complete and fairly robust, the real test begins as people
+with many different viewpoints undertake their own
+experiments.
+
+## Lorem
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet quam fringilla libero rutrum lobortis. Nam id vulputate odio. Cras molestie quis ante et vestibulum. Nullam viverra leo quis libero vulputate ultricies sit amet et lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vestibulum ligula ac tortor faucibus, eget viverra elit faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu diam interdum, luctus velit in, vehicula erat. Aliquam dapibus mauris eget nulla faucibus, vitae commodo massa placerat. Nam luctus felis nec fermentum lobortis. Aliquam ac odio a neque suscipit mollis. Cras sit amet felis dolor. Nam consequat, nulla vitae lacinia malesuada, ipsum nibh pulvinar mi, sit amet eleifend elit velit id nulla. Cras pretium elit luctus, laoreet turpis sed, scelerisque tellus. Fusce venenatis feugiat diam, id tristique ligula pellentesque vitae.
+
