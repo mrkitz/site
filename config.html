@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
-<html lang="$lang$">
+<html lang="">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>$title$</title>
+  <title>Configuration</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -23,7 +23,7 @@
   <!-- <a href="/site/usage.html" class="home-link">Usage</a> -->
   <!-- <a href="/site/config.html" class="home-link">Config</a> -->
 
-  <span class="site-title">$title$</span>
+  <span class="site-title">Configuration</span>
 
   <!-- <a href="/" class="home-link">Docs</a> -->
 
@@ -35,16 +35,22 @@
 </header>
 
 <div class="layout">
-  $if(toc)$
-  <nav class="sidebar">
+    <nav class="sidebar">
    <div id="toc" class="sidebar-inner">
-     $toc$
+     <ul>
+     <li><a href="#setup" id="toc-setup">Setup</a>
+     <ul>
+     <li><a href="#options" id="toc-options">Options</a></li>
+     </ul></li>
+     </ul>
    </div>
   </nav>
-  $endif$
-
+  
   <main class="content">
-    $body$
+    <h1 id="setup">Setup</h1>
+    <p>Details here.</p>
+    <h2 id="options">Options</h2>
+    <p>More details.</p>
   </main>
 </div>
 

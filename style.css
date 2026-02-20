@@ -16,7 +16,6 @@
 
 html {
   scroll-padding-top: var(--scroll-offset);
-  /* overflow-x: hidden; */
 }
 
 body {
@@ -24,7 +23,6 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  /* overflow-x: hidden; */
 }
 
 
@@ -38,7 +36,7 @@ body {
 
 .topbar {
   max-width: 100%;
-  overflow: hidden;         /* two lines added */
+  overflow: hidden;         /* top two lines added */
   outline: 2px solid red;
   line-height: 1;
   display: flex;
@@ -60,7 +58,7 @@ body {
 .home-link {
   color: white;
   text-decoration: none; 
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .menu-toggle {          /* control element hamburger */
@@ -91,7 +89,6 @@ body {
 /* Sticky TOC */
 .sidebar-inner {
   position: sticky;
-  /* top: calc(var(--header-height) + 2.75rem); */
   top: var(--toc-offset);
   padding: 0 1rem;
 }
