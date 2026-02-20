@@ -55,10 +55,19 @@ body {
   line-height: 1;
 }
 
-.home-link {
+.nav-link {
   color: white;
   text-decoration: none; 
   /* font-weight: bold; */
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid white;
 }
 
 .menu-toggle {          /* control element hamburger */
